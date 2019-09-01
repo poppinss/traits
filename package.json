@@ -1,6 +1,6 @@
 {
   "name": "@poppinss/traits",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Dead simple traits for ES6 classes",
   "scripts": {
     "mrm": "mrm --preset=@adonisjs/mrm-preset",
