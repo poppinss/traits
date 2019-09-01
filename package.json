@@ -63,5 +63,18 @@
   "np": {
     "contents": ".",
     "anyBranch": false
-  }
+  },
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poppinss/traits.git"
+  },
+  "bugs": {
+    "url": "https://github.com/poppinss/traits/issues"
+  },
+  "homepage": "https://github.com/poppinss/traits#readme"
 }
