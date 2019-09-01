@@ -105,6 +105,8 @@ The `trait` decorator will copy the `run` and `walk` methods to the `User` class
 If you are not using decorators, then you can make use of the `applyTraits` method instead.
 
 ```js
+import { applyTraits } from '@poppinss/traits'
+
 class User extends Person {}
 
 applyTraits(User, [Runner, Walker])
@@ -127,7 +129,12 @@ When using `Runner` as a trait, a runtime exception will be raised that `usernam
 
 ```ts
 export class Runner {
-  public username = 'virk'
+  /**
+   * It is ok to have uninitialized properties for the
+   * typescript compiler to work. But assigning them
+   * a value is not allowed
+   */
+  public username: string
   public run () {
     return `${this.username} runs`
   }
