@@ -1,6 +1,6 @@
 {
   "name": "@poppinss/traits",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Dead simple traits for ES6 classes",
   "main": "build/index.js",
   "files": [
