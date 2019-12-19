@@ -119,7 +119,7 @@ test.group('Copy prototype', () => {
     const user = new User()
     user['username'] = 'nikk'
 
-    // tslint:disable-next-line
+    // eslint-disable-next-line no-proto
     assert.isUndefined(user['__proto__'].username)
     assert.equal(user['username'], 'nikk')
   })
