@@ -1,28 +1,27 @@
+# Traits
+> A tiny library to add support for Traits in Javascript and Typescript projects.
+
+[![circleci-image]][circleci-url] [![typescript-image]][typescript-url] [![npm-image]][npm-url] [![license-image]][license-url]
+
+This library enables the support for using traits in your Javascript or Typescript codebase.
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 ## Table of contents
 
-- [Traits](#traits)
-  - [Inheritance](#inheritance)
-  - [Why not mixins?](#why-not-mixins)
-  - [Using Traits](#using-traits)
-  - [Usage](#usage)
-      - [Using as a decorator](#using-as-a-decorator)
-      - [Using as a method](#using-as-a-method)
-  - [Constraints](#constraints)
-  - [Extending Typescript types](#extending-typescript-types)
-  - [Maintainers](#maintainers)
+- [Inheritance in Javascript](#inheritance-in-javascript)
+- [Why not mixins?](#why-not-mixins)
+- [Using Traits](#using-traits)
+- [Installation](#installation)
+- [Usage](#usage)
+    - [Using as a decorator](#using-as-a-decorator)
+    - [Using as a method](#using-as-a-method)
+- [Constraints](#constraints)
+- [Extending Typescript types](#extending-typescript-types)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# Traits
-> A tiny library to add support for Traits in Javascript and Typescript projects.
-
-This library enables the support for using traits in your Javascript or Typescript codebase.
-
-[![circleci-image]][circleci-url] [![npm-image]][npm-url] ![][typescript-image] [![license-image]][license-url]
-
-## Inheritance
+## Inheritance in Javascript
 Since Javascript only allows extending a single class at a time, it can become harder to re-use code which relies on many concerns.
 
 The Javascript inheritance model follows a vertical approach, so inheritance leads to classes that stack upon one another as layers of a cake. For example:
@@ -68,7 +67,7 @@ Also, this library enforces some constraints to keep the code simpler and easy t
 - **Static properties are allowed**: We will copy the static properties to the destination class.
 - **Prototype properties are allowed**: We will copy the prototype properties to the destination class.
 
-## Usage
+## Installation
 Install the package from npm registry as follows:
 
 ```
@@ -78,18 +77,21 @@ npm i @poppinss/traits
 yarn add @poppinss/traits
 ```
 
-and use it as follows:
-
+## Usage
 #### Using as a decorator
 ```ts
 import { trait } from '@poppinss/traits'
 
 class Runner {
-  run () {}
+  run () {
+    console.log(this instanceof User)
+  }
 }
 
 class Walker {
-  walk () {}
+  walk () {
+    console.log(this instanceof User)
+  }
 }
 
 class Person {}
@@ -200,16 +202,14 @@ class User {
 }
 ```
 
-## Maintainers
-[Harminder virk](https://github.com/thetutlage)
-
 [circleci-image]: https://img.shields.io/circleci/project/github/poppinss/traits/master.svg?style=for-the-badge&logo=circleci
 [circleci-url]: https://circleci.com/gh/poppinss/traits "circleci"
+
+[typescript-image]: https://img.shields.io/badge/Typescript-294E80.svg?style=for-the-badge&logo=typescript
+[typescript-url]:  "typescript"
 
 [npm-image]: https://img.shields.io/npm/v/@poppinss/traits.svg?style=for-the-badge&logo=npm
 [npm-url]: https://npmjs.org/package/@poppinss/traits "npm"
 
-[typescript-image]: https://img.shields.io/badge/Typescript-294E80.svg?style=for-the-badge&logo=typescript
-
-[license-url]: LICENSE.md
-[license-image]: https://img.shields.io/aur/license/pac.svg?style=for-the-badge
+[license-image]: https://img.shields.io/npm/l/@poppinss/traits?color=blueviolet&style=for-the-badge
+[license-url]: LICENSE.md "license"
